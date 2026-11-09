@@ -1,57 +1,649 @@
+
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>Isha Developers and Engineering</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="Isha Developers and Engineering - Building construction, RCC work, steel reinforcement, shuttering, retaining walls, layout development and infrastructure works in Bengaluru.">
+
+<title>ISHA DEVELOPERS AND ENGINEERING | Bengaluru</title>
+
 <style>
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
-  margin: 0;
-  background: #f3f5f8;
-  color: #222;
+  color: #263448;
+  line-height: 1.7;
+  background: #f7f8fa;
+}
+
+:root {
+  --navy: #142c4d;
+  --blue: #203f68;
+  --gold: #d9ad58;
+  --light: #f1f4f8;
+}
+
+header {
+  background: var(--navy);
+  color: white;
+  padding: 17px 6%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 15px;
+}
+
+.brand {
+  font-size: 19px;
+  font-weight: bold;
+}
+
+.brand span {
+  color: var(--gold);
+}
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 17px;
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  font-size: 14px;
+}
+
+nav a:hover {
+  color: var(--gold);
+}
+
+.hero {
+  min-height: 490px;
+  padding: 100px 8%;
+  background: linear-gradient(120deg, #102541, #31577d);
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+.hero-content {
+  max-width: 760px;
+}
+
+.hero h1 {
+  font-size: clamp(34px, 6vw, 55px);
+  line-height: 1.2;
+  margin-bottom: 20px;
+}
+
+.hero h1 span {
+  color: var(--gold);
+}
+
+.hero p {
+  font-size: 19px;
+  margin-bottom: 28px;
+}
+
+.btn {
+  display: inline-block;
+  background: var(--gold);
+  color: #172c45;
+  text-decoration: none;
+  font-weight: bold;
+  padding: 12px 24px;
+  border-radius: 5px;
+}
+
+.btn:hover {
+  opacity: .88;
+}
+
+section {
+  padding: 75px 7%;
+}
+
+.section-title {
+  text-align: center;
+  color: var(--navy);
+  font-size: 32px;
+  margin-bottom: 12px;
+}
+
+.section-intro {
+  text-align: center;
+  max-width: 700px;
+  margin: 0 auto 35px;
+  color: #657080;
+}
+
+.about {
+  background: white;
   text-align: center;
 }
-header {
-  background: #17365d;
+
+.about-text {
+  max-width: 850px;
+  margin: auto;
+  font-size: 17px;
+}
+
+.services {
+  background: var(--light);
+}
+
+.cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 20px;
+}
+
+.card {
+  background: white;
+  padding: 27px 23px;
+  border-radius: 8px;
+  border-bottom: 4px solid var(--gold);
+  box-shadow: 0 4px 15px #142c4d10;
+}
+
+.card h3 {
+  color: var(--navy);
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #657080;
+  font-size: 15px;
+}
+
+.symbol {
+  font-size: 30px;
+  margin-bottom: 12px;
+}
+
+.projects {
+  background: white;
+}
+
+.project-card {
+  background: var(--light);
+  padding: 30px;
+  border-radius: 8px;
+  border-left: 4px solid var(--gold);
+}
+
+.project-card h3 {
+  color: var(--navy);
+}
+
+.why {
+  background: var(--navy);
   color: white;
-  padding: 45px 15px;
 }
-section {
-  padding: 35px 20px;
+
+.why .section-title {
+  color: white;
 }
-h1 { font-size: 28px; }
-h2 { color: #17365d; }
+
+.why .section-intro {
+  color: #dce5ef;
+}
+
+.why .card {
+  border-bottom: 0;
+}
+
+.process {
+  background: var(--light);
+}
+
+.contact {
+  background: white;
+  text-align: center;
+}
+
+.contact-box {
+  max-width: 750px;
+  margin: auto;
+  padding: 35px;
+  background: var(--light);
+  border-radius: 10px;
+}
+
+.contact-box p {
+  margin: 12px 0;
+}
+
+.contact-box a:not(.btn) {
+  color: var(--blue);
+  text-decoration: none;
+  overflow-wrap: anywhere;
+}
+
+.contact-box a:not(.btn):hover {
+  text-decoration: underline;
+}
+
+.contact-buttons {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 25px;
+}
+
+.whatsapp-btn {
+  display: inline-block;
+  background: #168b50;
+  color: white !important;
+  padding: 12px 24px;
+  border-radius: 5px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
 footer {
-  background: #17365d;
+  background: #0d2039;
   color: white;
-  padding: 20px;
+  padding: 30px 6%;
+  text-align: center;
+}
+
+footer p {
+  margin: 5px;
+}
+
+footer a {
+  color: var(--gold);
+  text-decoration: none;
+}
+
+@media(max-width:600px) {
+  header {
+    justify-content: center;
+    text-align: center;
+  }
+
+  nav {
+    justify-content: center;
+    gap: 12px;
+  }
+
+  .hero {
+    padding: 75px 7%;
+    min-height: 400px;
+  }
+
+  section {
+    padding: 55px 6%;
+  }
+
+  .contact-box {
+    padding: 25px 15px;
+  }
 }
 </style>
 </head>
+
 <body>
 
 <header>
-<h1>ISHA DEVELOPERS AND ENGINEERING</h1>
-<p>Building Your Vision</p>
+  <div class="brand">
+    ISHA <span>DEVELOPERS</span>
+  </div>
+
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#about">About</a>
+    <a href="#services">Services</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 </header>
 
-<section>
-<h2>Welcome to Isha Developers</h2>
-<p>Construction | Civil Engineering | Infrastructure</p>
-<p>Committed to quality, reliability and excellence.</p>
+<main>
+
+<!-- HOME SECTION -->
+
+<section class="hero" id="home">
+  <div class="hero-content">
+
+    <h1>
+      ISHA DEVELOPERS<br>
+      AND <span>ENGINEERING</span>
+    </h1>
+
+    <p>Building Your Vision. Engineering Your Future.</p>
+
+    <a class="btn" href="#contact">
+      Contact Our Team
+    </a>
+
+  </div>
 </section>
 
-<section>
-<h2>Our Services</h2>
-<p>Building Construction</p>
-<p>Civil Engineering Works</p>
-<p>Structural and Infrastructure Works</p>
-<p>Renovation and Development</p>
+<!-- ABOUT SECTION -->
+
+<section class="about" id="about">
+
+  <h2 class="section-title">About Our Company</h2>
+
+  <p class="section-intro">
+    Committed to quality, reliability and excellence.
+  </p>
+
+  <div class="about-text">
+
+    <p>
+      Isha Developers and Engineering is a construction
+      and civil engineering company based in Bengaluru,
+      Karnataka. We aim to deliver quality workmanship,
+      dependable project execution and practical
+      construction solutions.
+    </p>
+
+    <p style="margin-top:18px">
+      Our focus is on quality, safety, responsible
+      execution and building lasting relationships
+      with our clients.
+    </p>
+
+  </div>
 </section>
+
+<!-- SERVICES SECTION -->
+
+<section class="services" id="services">
+
+  <h2 class="section-title">Our Services</h2>
+
+  <p class="section-intro">
+    Professional construction and engineering solutions
+    for residential, commercial and infrastructure projects.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <div class="symbol">🏗️</div>
+      <h3>Building Construction</h3>
+      <p>
+        Complete building construction and development works.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🏢</div>
+      <h3>RCC Work</h3>
+      <p>
+        Reinforced cement concrete works for structural projects.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🔩</div>
+      <h3>Steel Reinforcement</h3>
+      <p>
+        Steel reinforcement and bar bending works.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🛠️</div>
+      <h3>Shuttering</h3>
+      <p>
+        Formwork and shuttering solutions for concrete structures.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🧱</div>
+      <h3>Retaining Wall Construction</h3>
+      <p>
+        Retaining wall construction and related civil works.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">📐</div>
+      <h3>Layout Development</h3>
+      <p>
+        Site development and layout infrastructure works.
+      </p>
+    </div>
+
+    <div class="card">
+      <div class="symbol">🛣️</div>
+      <h3>Infrastructure Works</h3>
+      <p>
+        Infrastructure development and associated
+        construction works.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- PROJECTS SECTION -->
+
+<section class="projects" id="projects">
+
+  <h2 class="section-title">Our Projects</h2>
+
+  <p class="section-intro">
+    A showcase of our construction and engineering work.
+  </p>
+
+  <div class="cards">
+
+    <div class="project-card">
+      <h3>Building Construction</h3>
+      <p>
+        Add your building construction photographs
+        and project details here.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Structural and RCC Works</h3>
+      <p>
+        Add your structural and concrete work photographs here.
+      </p>
+    </div>
+
+    <div class="project-card">
+      <h3>Infrastructure Development</h3>
+      <p>
+        Add your infrastructure and development
+        work photographs here.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WHY CHOOSE US -->
+
+<section class="why">
+
+  <h2 class="section-title">Why Choose Us?</h2>
+
+  <p class="section-intro">
+    Our approach to every project is built around:
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>Quality Focus</h3>
+      <p>
+        Attention to workmanship and project requirements.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Reliable Execution</h3>
+      <p>
+        Responsible planning and project coordination.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>Client Commitment</h3>
+      <p>
+        Clear communication and customer-focused service.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- WORK PROCESS -->
+
+<section class="process">
+
+  <h2 class="section-title">Our Work Process</h2>
+
+  <p class="section-intro">
+    A structured approach to every construction project.
+  </p>
+
+  <div class="cards">
+
+    <div class="card">
+      <h3>01. Consultation</h3>
+      <p>
+        Understand the client's project requirements.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>02. Planning</h3>
+      <p>
+        Plan the work, scope and execution approach.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>03. Execution</h3>
+      <p>
+        Carry out the agreed construction works.
+      </p>
+    </div>
+
+    <div class="card">
+      <h3>04. Handover</h3>
+      <p>
+        Review the completed scope with the client.
+      </p>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT SECTION -->
+
+<section class="contact" id="contact">
+
+  <h2 class="section-title">Contact Us</h2>
+
+  <p class="section-intro">
+    Have a construction project?
+    Let's discuss your requirements.
+  </p>
+
+  <div class="contact-box">
+
+    <h3>ISHA DEVELOPERS AND ENGINEERING</h3>
+
+    <p>
+      <strong>Location:</strong><br>
+      Bengaluru, Karnataka, India
+    </p>
+
+    <p>
+      <strong>Phone:</strong><br>
+      <a href="tel:+917019294503">
+        +91 7019294503
+      </a>
+    </p>
+
+    <p>
+      <strong>Email:</strong><br>
+      <a href="mailto:ishadevelopersandengineering@gmail.com">
+        ishadevelopersandengineering@gmail.com
+      </a>
+    </p>
+
+    <p>
+      We look forward to hearing from you.
+    </p>
+
+    <div class="contact-buttons">
+
+      <a class="btn" href="tel:+917019294503">
+        Call Us
+      </a>
+
+      <a class="whatsapp-btn"
+         href="https://wa.me/917019294503?text=Hello%20Isha%20Developers%20and%20Engineering%2C%20I%20have%20a%20construction%20enquiry."
+         target="_blank"
+         rel="noopener noreferrer">
+        WhatsApp Us
+      </a>
+
+      <a class="btn"
+         href="mailto:ishadevelopersandengineering@gmail.com">
+        Email Us
+      </a>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+<!-- FOOTER -->
 
 <footer>
-<p>Bengaluru, Karnataka, India</p>
-<p>© 2026 Isha Developers and Engineering</p>
+
+  <p>
+    <strong>ISHA DEVELOPERS AND ENGINEERING</strong>
+  </p>
+
+  <p>Building Your Vision. Engineering Your Future.</p>
+
+  <p>Bengaluru, Karnataka, India</p>
+
+  <p>
+    Phone: +91 7019294503
+  </p>
+
+  <p>
+    Email:
+    <a href="mailto:ishadevelopersandengineering@gmail.com">
+      ishadevelopersandengineering@gmail.com
+    </a>
+  </p>
+
+  <p>
+    © 2026 Isha Developers and Engineering.
+    All Rights Reserved.
+  </p>
+
 </footer>
 
 </body>
